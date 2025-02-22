@@ -4,9 +4,10 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <Text>Data de lançamento 14/06/2013</Text>
-      <StatusBar style="auto" />
+      <Text style={[styles.baseText, styles.title]}>The last of Us!</Text>
+      <Text style={[styles.baseText, styles.info]}>
+        <Text style={styles.label}>Data de lançamento: </Text>14/06/2013</Text>  
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -14,8 +15,24 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 50,
   },
+
+  baseText: {
+    color: 'white',
+  },
+
+  title: {
+    fontSize: 36,
+  },
+
+  info: {
+    fontSize: 20,
+},
+  label: {
+    fontWeight: 500,
+  }
+
 });
